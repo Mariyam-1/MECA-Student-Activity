@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - MECA</title>
+   
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff;
+            color: #333; }
+        .section {
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            padding: 50px;
+             transition: opacity 1.5s ease, transform 1.5s ease;
+            opacity: 0;
+            transform: translateY(50px);
+            border-bottom: 10px solid white;
+  background-color: #f5f5f5;
+        }
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;}
+        .text {
+            max-width: 50%;
+            padding: 5px;}
+        .image img {
+            width: 600px;
+            height: 400px;
+    object-fit: cover;
+         border-radius: 10px;
+            animation: zoomIn 3s ease-in-out;
+        }
+        h1 {
+            font-size: 3rem;
+            color: #f97316;
+            animation: fadeIn 2.5s ease-in-out;
+        }
+        p {
+            font-size: 1.2rem;
+      margin-top: 20px;
+            animation: slideIn 2.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        .intro {
+            background: #f97316;
+            color: white;
+          display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            height: 50vh;
+        }
+        .intro::before {
+            content: '';
+            position: absolute;
+             width: 60%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+                 transform: skewX(-20deg);
+            left: 0;
+            top: 0;
+        }
+        .intro .content {
+            justify-content: center;
+     text-align: center;
+        }
+        .intro h1 {
+            font-size: 4rem;
+            position: relative;
+            z-index: 1;
+        }
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .text, .image {
+                max-width: 100%;
+            }
+            .image img {
+                width: 100%;
+              height: auto;
+            }
+            h1 {
+                font-size: 2.5rem;
+                color: #f97316;
+            }
+            p {
+      font-size: 1rem;
+            }
+            .intro h1 {
+                font-size: 2.5rem;
+         color: #f5f5f5;
+            }
+        }
+        .image {
+    order: 2;
+}
+
+
+#mission .content {
+    flex-direction: row-reverse;
+    gap: 40px; 
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="section intro visible" id="intro">
+        <div class="content">
+        <h1 style="color: #f5f5f5;">Welcome to MECA's website</h1>
+        </div>
+    </div>
+
+    <div class="section" id="about">
+        <div class="content">
+            <div class="text">
+                <h1 >About Us</h1>
+                <p>MECA is a student organization dedicated to bridging the gap between academia and the industry,
+                     providing hands-on experience and professional development opportunities.</p>
+            </div>
+            <div class="image">
+                <img src="meca_background.jpg" alt="About Us Image">
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="mission">
+        <div class="content">
+            <div class="text">
+                <h1>Our Mission</h1>
+                <p>Our mission is to foster innovation, collaboration, and technical excellence among students through various projects, workshops, and events.</p>
+            </div>
+            <div class="image">
+                <img src="meca_background.jpg" alt="Mission Image">
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="vision">
+        <div class="content">
+            <div class="text">
+                <h1>Our Vision</h1>
+                <p>We envision a future where every engineering student is equipped with the skills and knowledge to become a leader in the industry.</p>
+            </div>
+            <div class="image">
+                <img src="meca_background.jpg" alt="Vision Image">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("scroll", function () {
+            const sections = document.querySelectorAll(".section");
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (sectionTop < windowHeight * 0.8) {
+                    section.classList.add("visible");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
