@@ -6,11 +6,11 @@ This project includes the **login** and **about** pages for the MECA website, de
 
 ## 🧩 Features
 
-- ✨ Clean and responsive design
-- 🔐 Login form with input validation
-- ℹ️ About page with MECA's mission and values
-- 🎨 Custom styling with `style.css`
-- 📱 Mobile-friendly layout
+-  Clean and responsive design
+-  Login form with input validation
+-  About page with MECA's mission and values
+-  Custom styling with `style.css`
+-  Mobile-friendly layout
 
 ---
 
@@ -25,16 +25,7 @@ This project includes the **login** and **about** pages for the MECA website, de
 
 - HTML5
 - CSS3
-- JavaScript (Vanilla)
-- [Google Fonts](https://fonts.google.com/)
+- JavaScript 
 - Responsive design techniques
 
 ---
-
-## 🖼️ Screenshots
-
-> You can upload screenshots in a folder like `screenshots/` and embed them like:
-
-```markdown
-![Login Page](./screenshots/login.png)
-![About Page](./screenshots/about.png)
