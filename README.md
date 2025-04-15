@@ -8,7 +8,7 @@ This project includes the **login** and **about** pages for the MECA website, de
 
 -  Clean and responsive design
 -  Login form with input validation
--  About page with MECA's mission and values
+-  About page with MECA's mission and values with animation
 -  Custom styling with `style.css`
 -  Mobile-friendly layout
 
@@ -16,7 +16,7 @@ This project includes the **login** and **about** pages for the MECA website, de
 
 ## 📄 Pages Included
 
-- `index.html` → Login page  
+- `login.html` & `stlyles.css` → Login page  
 - `about.html` → About MECA
 
 ---
